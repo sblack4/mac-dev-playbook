@@ -7,15 +7,15 @@
   check_mode: false
 
 - name: Ensure custom Terminal profile is added.
-  shell: open files/terminal/JJG-Term.terminal
+  shell: open files/terminal/Homebrew.terminal
   changed_when: false
-  when: "'JJG-Term' not in terminal_theme.stdout"
+  when: "'Homebrew' not in terminal_theme.stdout"
 
 # TODO: This doesn't work in Yosemite. Consider a different solution?
 - name: Ensure custom Terminal profile is set as default.
   shell: "{{ item }}"
   with_items:
-    - defaults write com.apple.terminal 'Default Window Settings' -string JJG-Term
-    - defaults write com.apple.terminal 'Startup Window Settings' -string JJG-Term
+    - defaults write com.apple.terminal 'Default Window Settings' -string Homebrew
+    - defaults write com.apple.terminal 'Startup Window Settings' -string Homebrew
   changed_when: false
-  when: "'JJG-Term' not in terminal_theme.stdout"
+  when: "'Homebrew' not in terminal_theme.stdout"
