@@ -34,7 +34,6 @@ homebrew_installed_packages:
   - go
   - gnupg
   - helm
-  - helm-docs
   - jq
   - kubernetes-cli
   - lf
