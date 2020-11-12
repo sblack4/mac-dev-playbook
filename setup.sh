@@ -1,9 +1,6 @@
 #!/bin/bash
 
 
-echo '--- disable press and hold ---'
-defaults write -g ApplePressAndHoldEnabled -bool false
-
 echo '--- installing pyenv ---'
 if [ ! $SKIP_PACKAGES ] ; then
     brew install pyenv pyenv-virtualenv
